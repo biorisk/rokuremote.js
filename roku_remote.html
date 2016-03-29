@@ -28,6 +28,7 @@
 				if (checkip) {
 					roku_ip_address = checkip
 				}
+				localStorage.setItem("roku_ip_address", roku_ip_address);
 			}
 
 			function roku_command(cmd) {
@@ -83,6 +84,7 @@
 					dataType: "xml",
 					success: appParser
 				});
+				roku_ip_address = localStorage.getItem("roku_ip_address");
 			});
 
 			function appParser(data) {
